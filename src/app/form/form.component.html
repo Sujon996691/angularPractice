@@ -1,0 +1,64 @@
+<div>
+    <h3 class="text-center">Submit Form</h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form (ngSubmit)="onSubmit()">
+                <div style="margin-top: 10px;">
+                  <label for="mobile">Mobile:</label>
+                  <input class="form-control" type="text" id="mobile" name="mobile" [(ngModel)]="formData.mobile">
+                </div>
+              
+                <div style="margin-top: 10px;">
+                  <label for="email">Email:</label>
+                  <input class="form-control" type="email" id="email" name="email" [(ngModel)]="formData.email">
+                </div>
+                
+                <div style="margin-top: 10px;">
+                    <label for="nid">NID:</label>
+                    <input class="form-control" type="nid" id="nid" name="nid" [(ngModel)]="formData.nid">
+                  </div>
+
+                <div style="margin-top: 10px;">
+                  <label for="broker">Broker:</label>
+                  <select class="form-control" id="broker" name="broker" [(ngModel)]="formData.broker">
+                        <option value="Padma Bank Securities Ltd">Padma Bank Securities Ltd</option>
+                        <option value="BD Finance Securities Ltd.">BD Finance Securities Ltd.</option>
+                  </select>
+                </div>
+              
+                <div class="col-md-12" style="margin-top: 10px;">
+                    <div class="col-md-4" style="margin-left: -30px;">
+                        <label>BO Type:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <label><input type="radio" name="radio" value="individual" [(ngModel)]="formData.radio"> Individual</label><br>
+                        <label><input type="radio" name="radio" value="joint" [(ngModel)]="formData.radio"> Joint</label>
+                    </div>                                        
+                </div>
+
+                <div class="col-md-12" style="margin-left: -30px;">
+                    <div class="col-md-5">
+                        <div>
+                            <label for="image">Select Image:</label>
+                            <input class="form-control" type="file" id="image" (change)="onFileSelected($event)" accept="image/*">
+                        </div>         
+                    </div>
+                    <div class="col-md-4" style="display: flex; justify-content: center;margin-left: -95px;margin-top: 27px;">                       
+                        <div *ngIf="imageData">
+                            <img [src]="imageData" alt="Selected Image" style="max-width: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div style="margin-top: 10px;margin-left: 330px;">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                
+              </form>
+        </div>
+    </div>
+</div>
+
