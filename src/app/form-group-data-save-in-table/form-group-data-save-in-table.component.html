@@ -1,0 +1,75 @@
+<div>
+    <h3 class="text-center">Submit Form Group And In table</h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="mobile">Mobile:</label>
+                    <input class="form-control" type="text" id="mobile" name="mobile" formControlName="mobile">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" formControlName="email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nid">NID:</label>
+                        <input class="form-control" type="text" id="nid" name="nid" formControlName="nid">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="broker">Broker:</label>
+                        <select class="form-control" id="broker" name="broker" formControlName="broker">
+                            <option value="Padma Bank Securities Ltd">Padma Bank Securities Ltd</option>
+                            <option value="BD Finance Securities Ltd.">BD Finance Securities Ltd.</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="col-md-2">
+                            <label>BO Type:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label><input type="radio" name="boType" value="individual" formControlName="boType">
+                                Individual</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label><input type="radio" name="boType" value="joint" formControlName="boType"> Joint</label>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div> 
+            </form>
+
+            <table class="table table-bordered" *ngIf="showTable">
+                <thead>
+                    <tr>
+                        <th>Sl No.</th>
+                        <th>Mobile</th>
+                        <th>Emial</th>
+                        <th>NID</th>
+                        <th>Broker</th>
+                        <th>BO Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of dataArray; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.mobile}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.nid}}</td>
+                        <td>{{data.broker}}</td>
+                        <td>{{data.boType}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

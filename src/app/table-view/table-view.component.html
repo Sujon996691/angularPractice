@@ -1,0 +1,27 @@
+<!-- src/app/another-component/another-component.component.html -->
+<div class="container mt-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Mobile</th>
+          <th scope="col">Email</th>
+          <th scope="col">NID</th>
+          <th scope="col">Broker</th>
+          <th scope="col">BO Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of dataService.dataArray">
+          <td>{{ data.mobile }}</td>
+          <td>{{ data.email }}</td>
+          <td>{{ data.nid }}</td>
+          <td>{{ data.broker }}</td>
+          <td>{{ data.boType }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-3">
+    <a routerLink="/AnotherPageFormGroupDataSaveInTable" class="btn btn-warning">Go back</a>
+  </div>
+  
