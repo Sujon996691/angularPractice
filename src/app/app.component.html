@@ -1,21 +1,16 @@
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">My Angular Work</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" routerLink="/" style="margin-left: 50px;font-size: large;">Form<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" routerLink="/formGroup" style="margin-left: 50px;font-size: large;">FormGroup</a>
-            <a class="nav-item nav-link" routerLink="/FormGroupDataSaveInTable" style="margin-left: 50px;font-size: large;">FormGroupForTable</a>
-            <a class="nav-item nav-link" routerLink="/AnotherPageFormGroupDataSaveInTable" style="margin-left: 50px;font-size: large;">AnotherPageFormGroupForTable</a>
-            
-          </div>
-        </div>
-      </nav> 
-      <div class="container">
-          <router-outlet></router-outlet>
-      </div>  
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/Form">My Angular Work</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="/Form">Form</a></li>
+      <li><a routerLink="/FormGroup">Form Group</a></li>
+      <li><a routerLink="/FormGroupDataSaveInTable">Data Show</a></li>
+      <li><a routerLink="/AnotherPageFormGroupDataSaveInTable">Data Show in Another Page</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
-

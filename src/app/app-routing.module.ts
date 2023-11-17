@@ -7,8 +7,8 @@ import { AnotherPageFormGroupDataSaveInTableComponent } from './another-page-for
 import { TableViewComponent } from './table-view/table-view.component';
 
 const routes: Routes = [
-  { path: '', component: FormComponent },
-  { path: 'formGroup', component: FormGroupComponent },
+  { path: 'Form', component: FormComponent },
+  { path: 'FormGroup', component: FormGroupComponent },
   { path: 'FormGroupDataSaveInTable', component:FormGroupDataSaveInTableComponent},
   { path: 'AnotherPageFormGroupDataSaveInTable', component: AnotherPageFormGroupDataSaveInTableComponent},
   { path: 'TableView', component: TableViewComponent },
