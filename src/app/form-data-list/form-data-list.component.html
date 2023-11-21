@@ -1,0 +1,36 @@
+<!-- form-data-list.component.html -->
+<div style="margin-top: -30px;margin-bottom: 30px;">
+    <h3 class="text-center">Data List</h3>
+  </div>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>SL No</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>NID</th>
+            <th>Broker</th>
+            <th>BO Type</th>
+            <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let formData of formDataList; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{ formData.mobile }}</td>
+            <td>{{ formData.email }}</td>
+            <td>{{ formData.nid }}</td>
+            <td>{{ formData.broker }}</td>
+            <td>{{ formData.radio }}</td>
+            <td>
+            <img [src]="formData.image" alt="Image" style="max-width: 50px;">
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-3">
+    <a routerLink="/Form" class="btn btn-warning">Go back</a>
+  </div>
+  
